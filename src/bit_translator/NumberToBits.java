@@ -24,7 +24,6 @@
 //this class converts numbers to bits
 package bit_translator;
 
-
 public class NumberToBits {
     int number;
     //int noConstructor = 1000;
@@ -43,7 +42,6 @@ public class NumberToBits {
     }
     //converts numbers to bits
     public String convertNumberToBits(int input){
-        
         int[] dividends = new int[8];
         int[] modulus = new int[8];
         
@@ -58,15 +56,13 @@ public class NumberToBits {
         String res = "";
         
         for(int i = 0; i < dividends.length; i++){
-        
-        modulus[i] = findMod(innerDiv);
-        dividends[i] = findDiv(innerDiv);       
-        innerDiv = dividends[i];
+            modulus[i] = findMod(innerDiv);
+            dividends[i] = findDiv(innerDiv);       
+            innerDiv = dividends[i];
         
         }    
            
         for(int x = modulus.length - 1; x >= 0; x--) {
-            
             bits.append(modulus[x]);
             res = bits.toString();   
         }       
